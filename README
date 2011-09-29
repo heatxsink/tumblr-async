@@ -1,0 +1,7 @@
+tumblr-async
+------------
+yet another simple oauth php library that is based on twitter-async by Jaisen Mathai <jaisen@jmathai.com> (see http://wiki.github.com/jmathai/epicode/epitwitter).
+
+require_once('EpiCurl.php');
+require_once('EpiOAuth.php');
+require_once('EpiTumblr.php');
