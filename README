@@ -5,7 +5,7 @@ yet another oauth php library for the tumblr oauth api based on twitter-async by
 here's a quick and dirty example of how to post a photo to tumblr:
 
     $tumblr = new EpiTumblr($consumer_key, $consumer_secret);
-    $tumblr->setToken($token, $token_secret');
+    $tumblr->setToken($token, $token_secret);
 
     $post_type = "photo";
     $post_source_url = "image_url_here";
