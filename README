@@ -2,6 +2,24 @@ tumblr-async
 ------------
 yet another oauth php library for the tumblr oauth api based on twitter-async by Jaisen Mathai <jaisen@jmathai.com> (see http://wiki.github.com/jmathai/epicode/epitwitter).
 
-require_once('EpiCurl.php');
-require_once('EpiOAuth.php');
-require_once('EpiTumblr.php');
+here's a quick and dirty example of how to post a photo to tumblr:
+
+    $tumblr = new EpiTumblr($consumer_key, $consumer_secret);
+    $tumblr->setToken($token, $token_secret');
+
+    $post_type = "photo";
+    $post_source_url = "image_url_here";
+    $post_caption = "caption_here";
+    $post_click_through_url = "click_through_url_here";
+    $post_generator = "the application that generates the post";
+    $request_data = array(
+        'send-to-twitter' => "no",
+        'type'      => $post_type,
+        'source'    => $post_source_url,
+        'caption'   => $post_caption,
+        'click-through-url' => $post_click_through_url,
+        'generator' => $post_generator
+    );
+
+    $user_info = $tumblr->post('/api/write', $request_data);
+    var_dump($user_info);
